@@ -6,31 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <img src='d.png'>
+<script>
 
+
+const defaultValues = {
+  // ...
+}
+window.addEventListener("load", (e) => {
+  Array.from(document.getElementsByClassName("savecontrol")).forEach((e) => {   
+    e.value = localStorage.getItem(e.id) ? localStorage.getItem(e.id) : (defaultValues[e.id] !== undefined ? defaultValues[e.id] : "");
+    e.addEventListener("change", (e) => {
+      localStorage.setItem(e.target.id, e.target.value);
+    });
+  });
+});
+  
+</script>
 <body>  
     <h1>Doyaneko</h1>
     
 </body>
-<script type='text/javascript'>
 
-  let randomNumber = Math.floor(Math.random() * 100) + 1;
-function guess() {
-  randomNumber = Math.floor(Math.random() * 100) + 1;
-  alert(randomNumber)
-  return randomNumber
-  
-}
-function ahaha(...num) {
-  alert('num:'+num);
-  return num;
-} 
-
-</script>  
-<div class="guesses">
-  <p class="guesses"></p>
-
-</div>
-  
 <body>
     <li><a href="https://github.com/ShossKe">github</a></li>
     <a>ScopDB download</a>
@@ -43,12 +39,18 @@ function ahaha(...num) {
 <body>
   
     <p>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-    <button style='padding:yellow;' type="button"onclick="alert('hello,world!')">Button</button>
+    <button type="button"onclick="alert('hello,world!')">Button</button>
 </body>
 <body>
     <form>
         <input type="file" name="files" required>
         <button type="submit">送信する</button>
     </form>
-</body>
+<body>  
+<body>
+  <form>
+        <input type="text" id="savecontorol" name="name" />
+        <button type="submit" id="savecontorol">
+  </form>
+<body>
 </html>
